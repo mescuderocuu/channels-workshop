@@ -1,1 +1,72 @@
 /* This file is for your main application css. */
+
+body {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry2.png");
+  background-size: 200px;
+  animation: moveBackground 100s linear infinite;
+}
+
+.center {
+  text-align: center;
+}
+
+#green.nice-button, .face-green {
+  background-image: url('../images/green.png');
+}
+
+#yellow.nice-button, .face-yellow {
+  background-image: url('../images/yellow.png');
+}
+
+#red.nice-button, .face-red {
+  background-image: url('../images/red.png');
+}
+
+.nice-button, .face {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  display: inline-block;
+  margin: 10px;  
+}
+
+.nice-button {
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.nice-button:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+
+@keyframes moveBackground {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .faces div {
+    width: 50px;
+    height: 50px;
+  }
+}
