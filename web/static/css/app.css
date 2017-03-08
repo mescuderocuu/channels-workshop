@@ -4,6 +4,7 @@ body {
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry2.png");
   background-size: 200px;
   animation: moveBackground 100s linear infinite;
+  font-family: 'Helvetica';
 }
 
 .center {
@@ -22,12 +23,17 @@ body {
   background-image: url('../images/red.png');
 }
 
+.face:hover {
+  opacity: 0.8;
+}
+
 .nice-button, .face {
   width: 100px;
   height: 100px;
   background-size: cover;
   display: inline-block;
-  margin: 10px;  
+  animation: appear 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  margin: 10px;
 }
 
 .nice-button {
@@ -39,7 +45,6 @@ body {
   text-decoration: none;
   transform: scale(1.1);
 }
-
 
 @keyframes moveBackground {
   0% {
